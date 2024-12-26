@@ -9,14 +9,19 @@ VNI：24bit，有2^24个
 底层/下层，underlayer，三层的IP网络，高可用性，高并发，高吞吐，高扩展
 
 CLOS：胖树架构，扩展性极强，全互联
+
 Spine---leaf（多归接入spine）
+
 NVO3：underlay 3层网络（ospf，isis）
+
 数据中心设备连线密密麻麻的，称为织物（fabric）
+
 TOR，连接叶子交换机（leaf），连接的路由器称为脊柱（spine，骨干），再连接的设备称为servire leaf
 
 BD
 vxlan网络中转发数据报文的二层广播域
 二层广播域：将VNI以1：1的方式映射到广播域BD，BD将成为vxlan网络转发数据报文的实体
+
 VNI：vxlan network identifier，vxlan的网络标识，类似vlan id，用于区分不同的vxlan段，不同vxlan段的虚拟机不能进行直接二层通信；一个VNI代表一个租户，即使多个终端用户属于同一个VNI，也表示是同一个租户的
 
 分布式网关部署中，VNI分为二层VNI和三层VNI
@@ -121,3 +126,8 @@ vxlan包头：vni 24bit，00000a （0000 0000 0000 0000 0000 1010）=10
 新UDP包头：Dport 4789，Sport hash值，不一定是4789
 新IP包头：SIP和DIP是vxlan的vtep地址
 新MAC包头：SMAC，DMAC是L3网络的每段的两端地址的MAC
+
+445566
+112233
+4455666
+555888822
